@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+
+    <item android:title="Home"
+
+        android:id="@+id/nav_item_home"
+        />
+    <!--android:icon="@drawable/inbox"-->
+
+    <item android:title="Login"
+        android:id="@+id/nav_item_login"/>
+    <!--android:icon="@drawable/draft"/>-->
+
+    <item android:title="About Us"
+        android:id="@+id/nav_item_aboutus"/>
+    <!--android:icon="@drawable/draft"/>-->
+
+    <item android:title="Policies"
+        android:id="@+id/nav_item_policies"/>
+    <!--android:icon="@drawable/draft"/>-->
+
+
+    <item android:title="Feedback"
+        android:id="@+id/nav_item_feedback"/>
+    <!--android:icon="@drawable/draft"/>-->
+
+    <item android:title="Settings"
+        android:id="@+id/nav_item_settings"/>
+    <!--android:icon="@drawable/draft"/>-->
+
+
+
+
+    <!--<item android:title="Others">
+        <menu>
+            <item
+                android:title="Spam"/>
+                android:icon="@drawable/spam"/
+            <item
+                android:title="Bin"/>
+                android:icon="@drawable/bin"/
+        </menu>
+    </item>
+
+    <group android:id="@+id/group_settings_id">
+
+        <item android:title="Settings"/>
+           android:icon="@drawable/settings">
+        <item android:title="Help"/>
+            android:icon="@drawable/help">
+    </group>-->
+
+
+</menu>

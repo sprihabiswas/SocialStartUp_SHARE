@@ -1,0 +1,260 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.Toolbar
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_alignParentTop="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:id="@+id/event_detail_toolbar"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:title="@string/app_name"
+        />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/button_event_apply"
+        android:scrollbarAlwaysDrawVerticalTrack="true"
+        android:scrollbars="none"
+        android:layout_below="@+id/event_detail_toolbar"
+        android:id="@+id/sv_event_detail">
+
+        <android.support.design.widget.CoordinatorLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+        <RelativeLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/rl_event_detail">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/event_detail_image_height"
+                android:src="@drawable/testing3"
+                android:scaleType="fitXY"
+                android:adjustViewBounds="true"
+
+                android:id="@+id/iv_event_detail_image" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:src="@color/image_tint"
+                android:layout_height="@dimen/event_detail_image_height"
+                android:scaleType="fitXY"
+                android:adjustViewBounds="true"
+                android:layout_alignTop="@+id/iv_event_detail_image"
+                android:layout_alignBottom="@+id/iv_event_detail_image"
+                android:layout_alignLeft="@+id/iv_event_detail_image"
+                android:layout_alignRight="@+id/iv_event_detail_image"
+                android:layout_alignStart="@+id/iv_event_detail_image"
+                android:layout_alignEnd="@+id/iv_event_detail_image"
+                android:alpha="0.9"
+                android:tint="@color/image_tint"
+                android:id="@+id/iv_event_detail_image_mask"
+                />
+
+
+
+            <TextView
+                android:id="@+id/tv_event_detail_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/event_detail_image_text"
+                android:layout_alignTop="@+id/iv_event_detail_image"
+                android:layout_alignLeft="@+id/iv_event_detail_image"
+                android:layout_alignRight="@+id/iv_event_detail_image"
+                android:layout_alignEnd="@+id/iv_event_detail_image"
+                android:layout_alignStart="@+id/iv_event_detail_image"
+                android:gravity="center_horizontal"
+                android:layout_marginTop="@dimen/event_detail_image_text1_marginTop"
+                android:text="Event Name"
+                android:textSize="@dimen/event_detail_image_text1_size"
+                />
+
+            <TextView
+                android:id="@+id/tv_event_detail_by"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/event_detail_image_text"
+                android:layout_alignTop="@+id/iv_event_detail_image"
+                android:layout_alignLeft="@+id/iv_event_detail_image"
+                android:layout_alignRight="@+id/iv_event_detail_image"
+                android:layout_alignEnd="@+id/iv_event_detail_image"
+                android:layout_alignStart="@+id/iv_event_detail_image"
+                android:gravity="center_horizontal"
+                android:layout_marginTop="@dimen/event_detail_image_text2_marginTop"
+                android:text="Event by"
+                android:textSize="@dimen/event_detail_image_text2_size"
+                />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_below="@+id/iv_event_detail_image"
+                android:divider="?android:dividerHorizontal"
+                android:padding="@dimen/event_detail_padding"
+                android:showDividers="middle">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv_event_detail_desc_heading"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/colorSecondaryText"
+                        android:alpha="0.5"
+                        android:text="Description"
+                        android:textSize="@dimen/event_detail_text_size"/>
+                    <TextView
+                        android:id="@+id/tv_event_detail_desc"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Some arbit text is going to fill up this space. This long note is to check that. Please bear with me. I love typing but not so much. Still let me continue so that we can see how it looks like. Is that okay with you? Whatever!"
+                        android:textColor="@color/colorSecondaryText"
+                        android:textSize="@dimen/event_detail_text_size"
+                        android:layout_marginTop="@dimen/event_detail_margin_gap"
+                        android:layout_marginBottom="@dimen/event_detail_margin_gap"/>
+
+                </LinearLayout>
+
+                <TableLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/event_detail_margin_gap"
+                    android:layout_marginBottom="@dimen/event_detail_margin_gap">
+
+                    <TableRow
+                        android:id="@+id/tr_event_detail_from"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent">
+
+                        <TextView
+                            android:id="@+id/tv_event_detail_from" android:text="From"
+                            android:layout_weight="1"
+                            android:textColor="@color/colorSecondaryText"
+                            android:alpha="0.5"
+                            android:gravity="center"
+                            android:textSize="@dimen/event_detail_text_size"/>
+
+                        <TextView
+                            android:id="@+id/tv_event_detail_from_date" android:text="Sunday | Feb 9,2015"
+                            android:layout_weight="1"
+                            android:textColor="@color/colorSecondaryText"
+                            android:gravity="center"
+                            android:textSize="@dimen/event_detail_text_size"/>
+
+                        <TextView
+                            android:id="@+id/tv_event_detail_from_time" android:text="9:00 a.m."
+                            android:layout_weight="1"
+                            android:textColor="@color/colorSecondaryText"
+                            android:gravity="center"
+                            android:textSize="@dimen/event_detail_text_size"/>
+
+                    </TableRow>
+
+                    <TableRow
+                        android:id="@+id/tr_event_detail_to"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:layout_marginTop="@dimen/event_detail_margin_gap">
+
+                        <TextView
+                            android:id="@+id/tv_event_detail_to" android:text="To"
+                            android:layout_weight="1"
+                            android:textColor="@color/colorSecondaryText"
+                            android:alpha="0.5"
+                            android:gravity="center"
+                            android:textSize="@dimen/event_detail_text_size"/>
+
+                        <TextView
+                            android:id="@+id/tv_event_detail_to_date" android:text="Sunday | Feb 9,2015"
+                            android:layout_weight="1"
+                            android:textColor="@color/colorSecondaryText"
+                            android:gravity="center"
+                            android:textSize="@dimen/event_detail_text_size"/>
+
+                        <TextView
+                            android:id="@+id/tv_event_detail_to_time" android:text="10:30 a.m."
+                            android:layout_weight="1"
+                            android:textColor="@color/colorSecondaryText"
+                            android:gravity="center"
+                            android:textSize="@dimen/event_detail_text_size"/>
+
+                    </TableRow>
+
+                </TableLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginTop="@dimen/event_detail_margin_gap">
+
+                    <TextView
+                        android:id="@+id/tv_event_detail_location_heading"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/colorSecondaryText"
+                        android:alpha="0.5"
+                        android:text="Location"
+                        android:textSize="@dimen/event_detail_text_size"/>
+                    <TextView
+                        android:id="@+id/tv_event_detail_location"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="This is the location"
+                        android:textColor="@color/colorSecondaryText"
+                        android:textSize="@dimen/event_detail_text_size"
+                        android:layout_marginTop="@dimen/event_detail_margin_gap"/>
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+        </RelativeLayout>
+
+            <android.support.design.widget.FloatingActionButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_anchor="@id/iv_event_detail_image"
+                app:layout_anchorGravity="bottom|right|end"
+                android:src="@drawable/ic_action_share"
+                android:layout_marginRight="@dimen/event_detail_share_margins"
+                android:layout_marginEnd="@dimen/event_detail_share_margins"
+                android:clickable="true"
+                android:id="@+id/fab_event_details"
+
+            />
+
+        </android.support.design.widget.CoordinatorLayout>
+
+    </ScrollView>
+
+    <Button
+        android:id="@+id/button_event_apply"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/event_detail_button_height"
+        android:layout_alignParentBottom="true"
+        android:background="@color/button_callforaction"
+        android:text="@string/apply"
+        android:textColor="@color/button_text"
+        android:textSize="@dimen/event_detail_button_text_size"
+        android:onClick="apply_for_event"/>
+
+</RelativeLayout>
+
+

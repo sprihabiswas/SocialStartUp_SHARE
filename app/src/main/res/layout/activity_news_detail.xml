@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical"
+    tools:context="com.example.sprihabiswas.share_draft1.sb.Activity_NewsDetail">
+
+
+    <android.support.v7.widget.Toolbar
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_alignParentTop="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:id="@+id/news_detail_toolbar"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:title="@string/app_name"
+        />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/news_detail_toolbar"
+        android:layout_above="@+id/news_detail_buttons"
+        android:scrollbars="none">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginBottom="@dimen/news_detail_margins">
+
+            <ImageView
+                android:id="@+id/news_detail_image1"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/news_detail_image1_height"
+                android:src="@drawable/testing"
+                android:scaleType="fitXY"
+                android:adjustViewBounds="true"
+                />
+
+            <TextView
+                android:id="@+id/news_detail_heading"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/news_detail_image1"
+                android:text="Heading1"
+                android:textColor="@color/news_details_heading"
+                android:textSize="@dimen/news_detail_heading_text_size"
+                android:layout_margin="@dimen/news_detail_margins"/>
+
+            <TextView
+                android:id="@+id/news_detail_content1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/news_detail_heading"
+                android:text="content"
+                android:textColor="@color/news_details_content"
+                android:textSize="@dimen/news_detail_content_text_size"
+                android:layout_margin="@dimen/news_detail_margins"/>
+
+            <ImageView
+                android:id="@+id/news_detail_image2"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/news_detail_image2_height"
+                android:src="@drawable/testing"
+                android:scaleType="fitXY"
+                android:adjustViewBounds="true"
+                android:layout_below="@+id/news_detail_content1"
+                android:layout_margin="@dimen/news_detail_margins"/>
+
+            <TextView
+                android:id="@+id/news_detail_content2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/news_detail_image2"
+                android:text="Content2"
+                android:textColor="@color/news_details_content"
+                android:textSize="@dimen/news_detail_content_text_size"
+                android:layout_margin="@dimen/news_detail_margins"/>
+            
+        </RelativeLayout>
+
+
+    </ScrollView>
+   <LinearLayout
+       android:id="@+id/news_detail_buttons"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:orientation="horizontal"
+       android:layout_alignParentBottom="true">
+
+       <Button
+           android:layout_width="wrap_content"
+           android:layout_height="@dimen/news_detail_button_height"
+           android:background="@color/colorPrimary"
+           android:layout_weight="1"
+           android:text="@string/share"
+           android:textColor="@color/button_text"
+
+           />
+       <Button
+           android:layout_width="wrap_content"
+           android:layout_height="@dimen/news_detail_button_height"
+           android:background="@color/button_callforaction"
+           android:layout_weight="1"
+           android:text="@string/next"
+           android:onClick="next_detail_news"
+           android:textColor="@color/button_text"/>
+   </LinearLayout>
+</RelativeLayout>

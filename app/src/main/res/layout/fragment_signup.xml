@@ -1,0 +1,109 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" tools:context="com.sprihabiswas.share.sb.Fragment_SignUp">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/iv_signup_name"
+            android:src="@drawable/ic_person_black_36dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginLeft="@dimen/signinup_margin_left"
+            android:layout_marginStart="@dimen/signinup_margin_left"
+            android:layout_marginTop="@dimen/signinup_margin_top"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/iv_signup_name"
+            android:layout_toEndOf="@+id/iv_signup_name"
+            android:layout_toRightOf="@+id/iv_signup_name"
+            android:hint="@string/name"
+            android:inputType="textPersonName"
+            android:textColor="@color/colorPrimaryText"
+            android:id="@+id/et_signup_name"
+            />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/iv_signup_email"
+            android:src="@drawable/ic_email_black_36dp"
+            android:layout_below="@+id/iv_signup_name"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginLeft="@dimen/signinup_margin_left"
+            android:layout_marginTop="@dimen/signinup_margin_gap" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/iv_signup_email"
+            android:layout_toEndOf="@+id/iv_signup_email"
+            android:layout_toRightOf="@+id/iv_signup_email"
+            android:hint="@string/email"
+            android:inputType="textEmailAddress"
+            android:textColor="@color/colorPrimaryText"
+            android:id="@+id/et_signin_password"
+
+            />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/iv_signup_password"
+            android:src="@drawable/ic_vpn_key_black_36dp"
+            android:layout_below="@+id/iv_signup_email"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginLeft="@dimen/signinup_margin_left"
+            android:layout_marginTop="@dimen/signinup_margin_gap" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/iv_signup_password"
+            android:layout_toEndOf="@+id/iv_signup_password"
+            android:layout_toRightOf="@+id/iv_signup_password"
+            android:hint="@string/password"
+            android:inputType="textPassword"
+            android:textColor="@color/colorPrimaryText"
+            android:id="@+id/et_signup_password"
+            android:password="true"
+            />
+
+        <RadioGroup
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/et_signup_password"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/rg_gender"
+            android:orientation="horizontal"
+            android:layout_marginTop="@dimen/signinup_margin_gap">
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/male"
+                android:checked="false"
+                android:id="@+id/rb_male"/>
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/female"
+                android:checked="false"
+                android:id="@+id/rb_female"/>
+
+
+
+        </RadioGroup>
+    </RelativeLayout>
+
+    </FrameLayout>

@@ -1,0 +1,59 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" tools:context="com.sprihabiswas.share.sb.Fragment_Feedback">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/tv_feedback_title"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/feedback_heading_size"
+            android:text="@string/feedback"
+            android:textSize="@dimen/feedback_heading_text_size"
+            android:textColor="@color/colorHeading"
+            android:background="@color/background_heading"
+            android:gravity="center"
+            android:layout_alignParentTop="true" />
+
+        <EditText
+            android:id="@+id/et_feedback_email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/background_feedback"
+            android:hint="@string/feedback_email"
+            android:textSize="@dimen/feedback_text_size"
+            android:textColor="@color/colorSecondaryText"
+            android:layout_below="@+id/tv_feedback_title"
+            android:padding="@dimen/general_padding"
+            android:layout_margin="@dimen/general_margin"/>
+
+        <EditText
+            android:id="@+id/et_feedback_content"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:background="@drawable/background_feedback"
+            android:hint="@string/feedback_content"
+            android:textSize="@dimen/feedback_text_size"
+            android:textColor="@color/colorSecondaryText"
+            android:layout_below="@+id/et_feedback_email"
+            android:padding="@dimen/general_padding"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            android:layout_margin="@dimen/general_margin"
+            android:gravity="top"/>
+
+        <Button
+            android:id="@+id/button_feedback_send"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/feedback_button_size"
+            android:background="@color/button_callforaction"
+            android:text="@string/send"
+            android:textSize="@dimen/feeback_button_text_size"
+            android:textColor="@color/button_text"
+            android:layout_alignParentBottom="true"/>
+
+    </RelativeLayout>
+
+</FrameLayout>
